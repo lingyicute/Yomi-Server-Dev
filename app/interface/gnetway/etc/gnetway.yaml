@@ -5,7 +5,7 @@ Etcd:
     - 127.0.0.1:2379
   Key: interface.gateway
 KeyFile: "./server_pkcs1.key"
-KeyFingerprint: "12240908862933197005"
+KeyFingerprint: "1614446045496974628"
 MaxProc: 4
 Server:
   Addrs:

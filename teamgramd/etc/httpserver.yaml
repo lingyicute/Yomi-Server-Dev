@@ -10,7 +10,7 @@ Http:
     Level: debug
 
 KeyFile: "./server_pkcs1.key"
-KeyFingerprint: "12240908862933197005"
+KeyFingerprint: "1614446045496974628"
 
 Session:
   Etcd:

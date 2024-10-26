@@ -44,7 +44,7 @@ const (
 var (
 	// TODO(@benqi): 预先计算出fingerprint
 	// 这里直接使用了0xc3b42b026ce86b21
-	// fingerprint uint64 = 12240908862933197005
+	// fingerprint uint64 = 1614446045496974628
 
 	// TODO(@benqi): 使用算法生成PQ
 	// 这里直接指定了PQ值: {0x17, 0xED, 0x48, 0x94, 0x1A, 0x08, 0xF9, 0x81}

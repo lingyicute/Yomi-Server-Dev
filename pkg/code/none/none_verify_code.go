@@ -40,7 +40,7 @@ func (m *noneVerifyCode) SendSmsVerifyCode(ctx context.Context, phoneNumber, cod
 }
 
 func (m *noneVerifyCode) VerifySmsCode(ctx context.Context, codeHash, code, extraData string) error {
-	if code != "12345" {
+	if code != "92323" {
 		return mtproto.ErrPhoneCodeInvalid
 	}
 	return nil

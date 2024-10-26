@@ -334,8 +334,8 @@ func (c *AuthorizationCore) authSendCode(authKeyId, sessionId int64, request *mt
 				if user.GetUser().GetUserType() == userpb.UserTypeTest {
 					needSendSms = false
 					codeData2.SentCodeType = model.SentCodeTypeApp
-					codeData2.PhoneCode = "12345"
-					codeData2.PhoneCodeExtraData = "12345"
+					codeData2.PhoneCode = "92323"
+					codeData2.PhoneCodeExtraData = "92323"
 					c.Logger.Infof("is test server: %v", codeData2)
 				} else {
 					if status, _ := c.svcCtx.StatusClient.StatusGetUserOnlineSessions(c.ctx, &statuspb.TLStatusGetUserOnlineSessions{
