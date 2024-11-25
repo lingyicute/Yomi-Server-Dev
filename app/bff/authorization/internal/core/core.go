@@ -20,7 +20,6 @@ package core
 
 import (
 	"context"
-	"fmt"
 	"math/rand"
 	"strings"
 	"time"
@@ -29,8 +28,6 @@ import (
 	"github.com/teamgram/proto/mtproto/rpc/metadata"
 	"github.com/teamgram/teamgram-server/app/bff/authorization/internal/svc"
 	msgpb "github.com/teamgram/teamgram-server/app/messenger/msg/msg/msg"
-	"github.com/teamgram/teamgram-server/pkg/code/conf"
-	"github.com/teamgram/teamgram-server/pkg/env2"
 	"github.com/teamgram/teamgram-server/pkg/phonenumber"
 
 	"github.com/zeromicro/go-zero/core/logx"
@@ -103,12 +100,10 @@ func (c *AuthorizationCore) pushSignInMessage(ctx context.Context, signInUserId 
 			Date:    int32(time.Now().Unix()),
 			FromId:  mtproto.MakePeerUser(777000),
 			PeerId:  mtproto.MakeTLPeerUser(&mtproto.Peer{UserId: signInUserId}).To_Peer(),
-			Message: "宝，注意啦！
-星愿刚刚发现有人正在尝试登录你的账号。
-
-如果是你本人在登录，那么你可以安全地忽略这条消息啦。但如果不是你在尝试登录，请确保你的账号已经设置了足够安全的密码。如果愿意的话，你还可以去“设置-已登录设备”里看看，并把所有不认识的设备踢下线。
-
-有什么问题的话，记得去找你的梨哦！", 
+			Message: "宝，注意啦！\n" +
+				"小嘉刚刚发现有人正在尝试登录你的账号。\n\n" +
+				"如果是你本人在登录，那么你可以安全地忽略这条消息啦。但如果不是你在尝试登录，请确保你的账号已经设置了足够安全的密码。如果愿意的话，你还可以去“设置-已登录设备”里看看，并把所有不认识的设备踢下线。\n\n" +
+				"有什么问题的话，记得去找你的梨哦！",
 			Entities: nil, 
 		}).To_Message()
 
